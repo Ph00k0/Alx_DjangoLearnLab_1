@@ -1,9 +1,12 @@
-# Retrieve the book
-book = Book.objects.get(title='Nineteen Eighty-Four')
+# Delete a Book Instance
 
-# Delete the book
+**Command:**
+
+```python
+from bookshelf.models import Book
+
+# Retrieve the book instance (assuming it's the one created earlier)
+book = Book.objects.get(title="Nineteen Eighty-Four")
+
+# Delete the book instance
 book.delete()
-
-# Verify the deletion
-books = Book.objects.all()
-print(books)
