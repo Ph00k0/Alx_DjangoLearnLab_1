@@ -44,3 +44,12 @@ urlpatterns = [
     path('logout/', user_logout, name='logout'),
     path('register/', UserRegisterView.as_view(), name='register'),
 ]
+
+from django.urls import path
+from .views import add_book, edit_book
+
+urlpatterns = [
+    path('add_book/', add_book, name='add_book'),
+    path('edit_book/<int:pk>/', edit_book, name='edit_book'),
+    # other URL patterns
+]
