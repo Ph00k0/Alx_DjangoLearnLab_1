@@ -1,4 +1,4 @@
-
+from django.contrib.auth import login
 from django.views.generic.detail import DetailView
 from django.shortcuts import render
 
